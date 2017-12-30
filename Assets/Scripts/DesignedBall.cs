@@ -34,8 +34,9 @@ public class DesignedBall : MonoBehaviour {
          // Debug.Log(string.Format("{0} : {1} [{2} {3} {4}]", Main.currentDesignedBall, ext.transform.name, Main.extensions[warrior, 0].x, Main.extensions[warrior, 0].y, Main.extensions[warrior, 0].z));
         }
         else
+        if (Main.currentDesignedBall != null)
         {
-            warrior = int.Parse(Main.currentDesignedBall[Main.currentDesignedBall.IndexOf("(") + 1].ToString()) - 1;
+                warrior = int.Parse(Main.currentDesignedBall[Main.currentDesignedBall.IndexOf("(") + 1].ToString()) - 1;
             if (Main.currentDesignedBall.Contains("White"))
                 warrior += 3;
             Main.extensions[warrior, 0].z = 0f; // if z==0 then extension is absent, but if z==0.1f then extension is present
@@ -51,7 +52,7 @@ public class DesignedBall : MonoBehaviour {
             Main.extensions[warrior, 1].z = -0.1f;
          // Debug.Log(string.Format("{0} : {1} [{2} {3} {4}]", Main.currentDesignedBall, ext.transform.name, Main.extensions[warrior, 1].x, Main.extensions[warrior, 1].y, Main.extensions[warrior, 1].z));
         }
-        else
+        else if (Main.currentDesignedBall != null)
         {
             warrior = int.Parse(Main.currentDesignedBall[Main.currentDesignedBall.IndexOf("(") + 1].ToString()) - 1;
             if (Main.currentDesignedBall.Contains("White"))
@@ -69,7 +70,7 @@ public class DesignedBall : MonoBehaviour {
             Main.extensions[warrior, 2].z = -0.1f;
          // Debug.Log(string.Format("{0} : {1} [{2} {3} {4}]", Main.currentDesignedBall, ext.transform.name, Main.extensions[warrior, 2].x, Main.extensions[warrior, 2].y, Main.extensions[warrior, 2].z));
         }
-        else
+        else if(Main.currentDesignedBall != null)
         {
             warrior = int.Parse(Main.currentDesignedBall[Main.currentDesignedBall.IndexOf("(") + 1].ToString()) - 1;
             if (Main.currentDesignedBall.Contains("White"))
